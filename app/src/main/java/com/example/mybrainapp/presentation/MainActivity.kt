@@ -1,7 +1,8 @@
-package com.example.mybrainapp
+package com.example.mybrainapp.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.mybrainapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
