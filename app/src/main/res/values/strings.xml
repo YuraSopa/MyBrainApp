@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MyBrainApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="game_rules">The rules of the game: in front of you will be three pieces, two from the bottom and one from the top, in two of them there will be numbers. It is necessary that the sum of the numbers in the bottom two pieces should be equal to the number in the top piece, so you need to insert the missing number. \n\n Example: in the upper circle is the number 7, in one of the lower circles is a question mark, and in one of the lower circles is a question mark. in one of the lower circles, a question mark in the other circle, and in the other circle the number 4. So in the place of the question mark. should be 3, because 3 + 4 = 7.</string>
+    <string name="ok">OK</string>
+    <string name="make_a_number">Make a number</string>
+    <string name="welcome_logo">Welcome logo</string>
+    <string name="right_answers_s_minimal_s">Right answers %s (minimal %s)</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="percent_of_correct_answers_s">Percent of correct answers: %s</string>
+    <string name="required_percentage_of_correct_answers_s">Required percentage of correct answers: %s</string>
+    <string name="your_score_s">Your score: %s</string>
+    <string name="required_number_of_correct_answers_s">Required number of correct answers: %s</string>
 </resources>
