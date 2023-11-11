@@ -17,7 +17,7 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:layout_margin="32dp"
+            android:layout_margin="40dp"
             android:contentDescription="@string/welcome_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_ok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ok"
