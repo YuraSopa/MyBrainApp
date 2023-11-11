@@ -6,7 +6,7 @@
     <string name="ok">OK</string>
     <string name="make_a_number">Make a number</string>
     <string name="welcome_logo">Welcome logo</string>
-    <string name="right_answers_s_minimal_s">Right answers %s (minimal %s)</string>
+    <string name="progress_answers">Right answers %s (minimal %s)</string>
     <string name="try_again">TRY AGAIN</string>
     <string name="percent_of_correct_answers_s">Percent of correct answers: %s</string>
     <string name="required_percentage_of_correct_answers_s">Required percentage of correct answers: %s</string>

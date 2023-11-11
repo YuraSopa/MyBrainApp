@@ -132,7 +132,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/right_answers_s_minimal_s"
+        android:text="@string/progress_answers"
 
         app:layout_constraintBottom_toTopOf="@id/progress_bar"
         app:layout_constraintTop_toBottomOf="@id/tv_left_number" />
