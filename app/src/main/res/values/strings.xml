@@ -6,10 +6,12 @@
     <string name="ok">OK</string>
     <string name="make_a_number">Make a number</string>
     <string name="welcome_logo">Welcome logo</string>
-    <string name="progress_answers">Right answers %s (minimal %s)</string>
+    <string name="score_answers">Right answers %s (minimal %s)</string>
     <string name="try_again">TRY AGAIN</string>
-    <string name="percent_of_correct_answers_s">Percent of correct answers: %s</string>
-    <string name="required_percentage_of_correct_answers_s">Required percentage of correct answers: %s</string>
-    <string name="your_score_s">Your score: %s</string>
-    <string name="required_number_of_correct_answers_s">Required number of correct answers: %s</string>
+    <string name="percent_correct_answers">Percent of correct answers: %s %%</string>
+    <string name="required_percentage_answers">Required percentage of correct answers: %s %%</string>
+    <string name="your_score">Your score: %s</string>
+    <string name="required_answers">Required number of correct answers: %s</string>
+    <string name="question">\?</string>
+    <string name="game_over_description">Game over</string>
 </resources>

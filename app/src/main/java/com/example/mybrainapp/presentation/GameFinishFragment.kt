@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.example.mybrainapp.R
 import com.example.mybrainapp.databinding.FragmentGameFinishBinding
 import com.example.mybrainapp.domain.entity.GameResult
 
@@ -32,6 +33,47 @@ class GameFinishFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        setupClickListeners()
+        showResults()
+    }
+
+    private fun showResults() {
+
+        with(binding) {
+            if (result.winner) {
+                emojiResult.setImageResource(R.drawable.ic_smile)
+            } else {
+                emojiResult.setImageResource(R.drawable.ic_sad)
+            }
+            tvRequiredAnswers.text = String.format(
+                getString(R.string.required_answers),
+                result.gameSettings.minCountOfRightAnswers
+            )
+            tvScoreAnswers.text = String.format(
+                getString(R.string.your_score),
+                result.countOfRightAnswers
+            )
+            tvRequiredPercentage.text = String.format(
+                getString(R.string.required_percentage_answers),
+                result.gameSettings.minPercentOfRightAnswers
+            )
+            tvScorePercentage.text = String.format(
+                getString(R.string.percent_correct_answers),
+                gerPercentOfRightAnswers()
+            )
+        }
+    }
+
+    private fun gerPercentOfRightAnswers() = with(result) {
+        if (countOfRightAnswers == 0) {
+            return 0
+        } else {
+            ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
+        }
+    }
+
+    private fun setupClickListeners() {
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 retryGame()
