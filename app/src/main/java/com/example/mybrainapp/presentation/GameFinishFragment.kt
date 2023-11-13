@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.mybrainapp.R
 import com.example.mybrainapp.databinding.FragmentGameFinishBinding
 
 class GameFinishFragment : Fragment() {
@@ -29,43 +28,9 @@ class GameFinishFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupClickListeners()
-        showResults()
+        binding.result = args.result
     }
 
-    private fun showResults() {
-
-        with(binding) {
-            if (args.result.winner) {
-                emojiResult.setImageResource(R.drawable.ic_smile)
-            } else {
-                emojiResult.setImageResource(R.drawable.ic_sad)
-            }
-            tvRequiredAnswers.text = String.format(
-                getString(R.string.required_answers),
-                args.result.gameSettings.minCountOfRightAnswers
-            )
-            tvScoreAnswers.text = String.format(
-                getString(R.string.your_score),
-                args.result.countOfRightAnswers
-            )
-            tvRequiredPercentage.text = String.format(
-                getString(R.string.required_percentage_answers),
-                args.result.gameSettings.minPercentOfRightAnswers
-            )
-            tvScorePercentage.text = String.format(
-                getString(R.string.percent_correct_answers),
-                gerPercentOfRightAnswers()
-            )
-        }
-    }
-
-    private fun gerPercentOfRightAnswers() = with(args.result) {
-        if (countOfRightAnswers == 0) {
-            return 0
-        } else {
-            ((countOfRightAnswers / countOfQuestions.toDouble()) * 100).toInt()
-        }
-    }
 
     private fun setupClickListeners() {
         binding.buttonRetry.setOnClickListener {
@@ -81,5 +46,4 @@ class GameFinishFragment : Fragment() {
     private fun retryGame() {
         findNavController().popBackStack()
     }
-
 }
